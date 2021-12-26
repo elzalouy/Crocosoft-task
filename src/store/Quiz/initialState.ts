@@ -6,6 +6,7 @@ const initialState: Quizes = {
         title: "",
         url: "",
         score: 0,
+        description: '',
         questions_answers: [{
             answer_id: null,
             answers: [
@@ -20,6 +21,27 @@ const initialState: Quizes = {
             id: "",
             text: ""
         }]
-    }]
+    }],
+    Quiz: {
+        id: "",
+        title: "",
+        url: "",
+        score: 0,
+        description: "",
+        questions_answers: [{
+            answer_id: null,
+            answers: [
+                {
+                    id: "",
+                    is_true: false,
+                    text: "",
+                }
+            ],
+            feedback_false: "",
+            feedback_true: "",
+            id: "",
+            text: ""
+        }],
+    }
 }
 export default initialState;

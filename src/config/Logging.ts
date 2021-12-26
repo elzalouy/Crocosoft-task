@@ -44,9 +44,9 @@ const error = (message: any, namespace?: string) => {
 const getDate = () => {
   return new Date().toISOString();
 };
-const Handle = (func: any) => {
+const Handle = async (func: any) => {
   try {
-    func()
+    await func();
   } catch (error) {
     return error
   }

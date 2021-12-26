@@ -1,5 +1,5 @@
 import { IRoute } from "interface/components/Navigation";
-import { Quiz, Quizes } from "../pages/Quiz";
+import { Quiz, Quizes, NewQuiz } from "../pages/Quiz";
 
 export const AppRoutes: IRoute[] = [
     {
@@ -12,6 +12,12 @@ export const AppRoutes: IRoute[] = [
         path: "/Quiz/:id",
         name: "Quiz",
         component: Quiz,
+        exact: true,
+    },
+    {
+        path: "/newQuiz",
+        name: "NewQuiz",
+        component: NewQuiz,
         exact: true,
     },
 ];

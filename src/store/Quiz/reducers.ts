@@ -1,10 +1,8 @@
 export const setQuizes = (state: any, action: any) => {
-    state.Quizes = [action.payload]
+    state.Quizes = action.payload
 }
 export const setQuiz = (state: any, action: any) => {
-    let newState = [...state.Quizes]
-    newState.push(action.payload)
-    state.Quizes = newState
+    state.Quiz = action.payload
 }
 export const updateQuiz = (state: any, action: any) => {
     let id = action?.payload?.quiz_id;

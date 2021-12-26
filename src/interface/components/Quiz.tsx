@@ -13,6 +13,7 @@ export declare interface QuizProps {
   Quiz: Quiz;
 }
 export declare interface QuizCardProps {
+  id: string;
   title: string;
   url: string;
   description: string;

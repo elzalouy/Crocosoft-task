@@ -7,7 +7,9 @@ export interface Quizes {
     url: string;
     score: number;
     questions_answers: Questions_answers[];
-  }[];
+    description: string;
+    }[];
+  Quiz: Quiz;
 }
 export interface Quiz {
   id: string;
@@ -15,4 +17,5 @@ export interface Quiz {
   url: string;
   score: number;
   questions_answers: Questions_answers[];
+  description: string;
 }

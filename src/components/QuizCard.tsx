@@ -1,5 +1,6 @@
 import { QuizCardProps } from "interface/components/Quiz";
 import * as React from "react";
+import Button from "./Button";
 import "./style.css";
 
 const Card: React.FC<QuizCardProps> = (props) => {
@@ -13,6 +14,11 @@ const Card: React.FC<QuizCardProps> = (props) => {
       <p className="CardQuestions mt-3">
         <b>No of questions : </b> {props.questions}
       </p>
+      <Button
+        title="Go To Quiz"
+        link={`/Quiz/${props.id}`}
+        className="AddQuizBtn btn"
+      />
     </div>
   );
 };

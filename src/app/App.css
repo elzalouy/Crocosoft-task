@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+.App {
+  background-color: #f6f6f6 !important;
+}
 .AppHeader {
   height: 150px;
   background-color: #730014;

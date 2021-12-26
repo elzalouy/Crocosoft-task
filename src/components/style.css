@@ -26,7 +26,13 @@
   border-radius: 20px;
   height: 300px;
   transition: all 0.5s;
+  cursor: pointer;
 }
 .Card:hover {
   background-color: #313131ea;
+}
+.AddQuizBtn {
+  color: white !important;
+  background-color: #ff0f39 !important;
+  border-radius: 20px !important;
 }

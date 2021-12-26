@@ -1,0 +1,32 @@
+.CardTitle {
+  color: white;
+  font-size: medium;
+  font-size: 36px;
+}
+.CardDesc {
+  color: white;
+  font-size: medium;
+  font-size: 12px;
+  font-weight: 300;
+}
+.CardScore {
+  color: white;
+  font-size: medium;
+  font-size: 16px;
+  font-weight: 600;
+}
+.CardQuestions {
+  color: white;
+  font-size: medium;
+  font-size: 12px;
+  font-weight: 300;
+}
+.Card {
+  background-color: #313131;
+  border-radius: 20px;
+  height: 300px;
+  transition: all 0.5s;
+}
+.Card:hover {
+  background-color: #313131ea;
+}

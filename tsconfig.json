@@ -18,9 +18,54 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "interface": [
+        "src/interface/index.ts"
+      ],
+      "interface/*": [
+        "src/interface/*"
+      ],
+      "pages": [
+        "src/pages/index.ts"
+      ],
+      "pages/*": [
+        "src/pages/*"
+      ],
+      "app": [
+        "src/app/App.tsx"
+      ],
+      "app/*": [
+        "src/app/*"
+      ],
+      "quiz": [
+        "src/pages/index.ts"
+      ],
+      "quiz/*": [
+        "src/pages/*"
+      ],
+      "config": [
+        "src/config/index.ts"
+      ],
+      "config/*": [
+        "src/config/*"
+      ],
+      "store": [
+        "src/store/index.ts"
+      ],
+      "store/*": [
+        "src/store/*"
+      ]
+    }
   },
   "include": [
     "src"
-  ]
+  ],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ],
 }

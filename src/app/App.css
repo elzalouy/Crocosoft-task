@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+.AppHeader {
+  height: 150px;
+  background-color: #730014;
+  padding-top: 50px;
+  padding-left: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.Font1 {
+  font-family: "Cairo", sans-serif;
+  color: white;
+  font-size: 32px;
+}

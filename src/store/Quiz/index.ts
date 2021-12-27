@@ -7,5 +7,6 @@ export const QuizSlice = createSlice({
     initialState: initialState,
     reducers: Reducers
 })
+export type QuizState = ReturnType<typeof QuizSlice.reducer>;
 export const QuizActions = QuizSlice.actions;
 export default QuizSlice.reducer;

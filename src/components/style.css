@@ -36,3 +36,11 @@
   background-color: #ff0f39 !important;
   border-radius: 20px !important;
 }
+
+.QuestionCard {
+  background-color: #313131;
+  border-radius: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  padding: 20px;
+}

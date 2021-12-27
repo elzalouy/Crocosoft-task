@@ -5,13 +5,15 @@ import { useDispatch, useSelector } from "react-redux";
 import Button from "src/components/Button";
 import Header from "src/components/header";
 import Card from "src/components/QuizCard";
+import { RootState } from "store";
 import { getQuizes } from "../../store/Quiz/actions";
 
 export const Quizes: React.FC<QuizesProps> = (props) => {
-  const state = useSelector((state: any) => state.Quiz);
+  const state = useSelector((state: RootState) => state.Quiz);
   const dispatch = useDispatch();
   React.useEffect(() => {
-    dispatch(getQuizes());
+    if (state.Quizes.length === 1 && state.Quizes[0].id === "")
+      dispatch(getQuizes());
   }, [dispatch]);
   return (
     <>

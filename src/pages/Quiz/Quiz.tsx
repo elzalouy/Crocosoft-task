@@ -4,15 +4,20 @@ import * as React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RouteComponentProps } from "react-router-dom";
 import Header from "src/components/header";
-import { getQuiz } from "../../store/Quiz/actions";
 import Button from "../../../src/components/Button";
+import { RootState } from "store";
+import { QuizActions } from "../../store/Quiz";
 
 export const Quiz: React.FC<QuizProps> = (props: RouteComponentProps) => {
   const dispatch = useDispatch();
-  const { Quiz } = useSelector((state: any) => state.Quiz);
+  const { Quiz, Quizes } = useSelector((state: RootState) => state.Quiz);
   React.useEffect(() => {
-    dispatch(getQuiz(props?.match?.params?.id));
-  }, [dispatch]);
+    let index = Quizes.findIndex(
+      (i: any) => i.id === parseInt(props?.match?.params?.id)
+    );
+    let Quiz = Quizes[index];
+    dispatch(QuizActions.setQuiz(Quiz));
+  }, [dispatch, props?.match?.params?.id]);
   return (
     <div>
       <Header title={Quiz?.title} />
@@ -46,7 +51,7 @@ export const Quiz: React.FC<QuizProps> = (props: RouteComponentProps) => {
         <div className="col-sm-2">
           <Button
             title="Edit Quiz"
-            link={`/editQuiz/${Quiz.id}`}
+            link={`/editQuiz/${Quiz?.id}`}
             className="AddQuizBtn btn"
           />
         </div>

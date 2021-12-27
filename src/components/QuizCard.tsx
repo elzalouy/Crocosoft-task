@@ -16,7 +16,7 @@ const Card: React.FC<QuizCardProps> = (props) => {
       </p>
       <Button
         title="Go To Quiz"
-        link={`/Quiz/${props.id}`}
+        link={`/Quiz/${props?.id}`}
         className="AddQuizBtn btn"
       />
     </div>
